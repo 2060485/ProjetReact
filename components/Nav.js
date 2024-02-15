@@ -20,7 +20,7 @@ function Nav() {
                             </li>
                         </ul>
                     </div>
-                    <div class="collapse navbar-collapse justify-content-end" >
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="/signIn">Sign in</a>

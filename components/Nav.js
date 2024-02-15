@@ -1,34 +1,40 @@
-import Grimace from './grimace.png'
+import { useState } from 'react';
+import Grimace from './grimace.png';
 
 function Nav() {
+    const [activePage, setActivePage] = useState(window.location.pathname);
+
+    const handleNavLinkClick = (path) => {
+        setActivePage(path);
+    };
+
     return (
         <div>
-            <nav class="navbar bg-dark border-bottom navbar-expand-lg" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <img src={Grimace} alt="Logo" width="30" height="30" class="d-inline-block align-text-top" />
-                    <a class="navbar-brand" href="#">Grimace</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+            <nav className="navbar bg-dark border-bottom navbar-expand-lg" data-bs-theme="dark">
+                <div className="container-fluid">
+                    <img src={Grimace} alt="Logo" width="30" height="30" className="d-inline-block align-text-top" />
+                    <a className="navbar-brand" href="#">Grimace</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className={`nav-link ${activePage === '/' ? 'active' : ''}`} href="/" onClick={() => handleNavLinkClick('/')}>Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/profil">Features</a>
+                            <li  className="nav-item">
+                                <a className={`nav-link ${activePage === '/profil' ? 'active' : ''}`} href="/profil" onClick={() => handleNavLinkClick('/profil')}>Features</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/signIn">Sign in</a>
+                    <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className={`nav-link ${activePage === '/signIn' ? 'active' : ''}`} href="/signIn" onClick={() => handleNavLinkClick('/signIn')}>Sign in</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
             </nav>
         </div>
     );

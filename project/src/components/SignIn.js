@@ -20,9 +20,13 @@ function SignIn() {
 
                 <div className='passwordError'></div>
                 <button type="submit" class="btn btn-primary mt-2">Submit</button>
-                <br></br>
+                <br/>
                 <div className="signup mt-2">
                     <div>No account? <a class="signup" href="/signUp"> Sign up</a></div>
+                </div>
+                <br/>
+                <div className="signup mt-2">
+                    <div>Forgot password? <a class="reset" href="/resetPassword">Reset password</a></div>
                 </div>
             </form>
 

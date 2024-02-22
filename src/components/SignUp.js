@@ -32,7 +32,7 @@ function SignUp() {
             setPasswordError2("");
         }
 
-        const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
         if (!emailRegex.test(inputValueEmail)) {
             setEmailError("Please enter a valid email address!");
         } else {

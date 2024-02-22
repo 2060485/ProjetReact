@@ -6,7 +6,7 @@ import './home.css'
 function Home() {
 
     return (
-        <div id="carouselExampleAutoplaying" class="carousel slide w-50" data-bs-ride="carousel">
+        <div id="carouselExampleAutoplaying" class="carousel slide w-50 mt-5" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src={test} class="d-block w-100 img" alt="..."/>

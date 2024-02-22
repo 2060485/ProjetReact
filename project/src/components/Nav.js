@@ -23,15 +23,15 @@ function Nav() {
                                 <a className={`nav-link ${activePage === '/' ? 'active' : ''}`} href="/" onClick={() => handleNavLinkClick('/')}>Home</a>
                             </li>
                             <li  className="nav-item">
-                                <a className={`nav-link ${activePage =='/pro= fil' ? 'active' : ''}`} href="/profil" onClick={() => handleNavLinkClick('/profil')}>Features</a>
-                            </li>
-                            <li  className="nav-item">
                                 <a className={`nav-link ${activePage === '/recipes' ? 'active' : ''}`} href="/recipes" onClick={() => handleNavLinkClick('/recipes')}>Recipes</a>
                             </li>
                         </ul>
                     </div>
                     <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
                         <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className={`nav-link ${activePage === '/profile' ? 'active' : ''}`} href="/profile" onClick={() => handleNavLinkClick('/profile')}>Profile</a>
+                            </li>
                             <li className="nav-item">
                                 <a className={`nav-link ${activePage === '/signIn' ? 'active' : ''}`} href="/signIn" onClick={() => handleNavLinkClick('/signIn')}>Sign in</a>
                             </li>

@@ -1,11 +1,9 @@
-
-
-function Profil() {
+function Profile() {
     return (
-        <div>
-            Profil
-        </div>
+        <>
+            
+        </>
     );
 }
 
-export default Profil;
+export default Profile;

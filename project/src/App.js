@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
-import Profil from './components/Profile';
+import Profile from './components/Profile';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Recipes from './components/Recipes';
@@ -19,7 +19,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Home />} />
           <Route path='/about' element={<Home />} />
-          <Route path='/profil' element={<Profil />} />
+          <Route path='/profile' element={<Profile />} />
           <Route path='/recipes' element={<Recipes />} />
           <Route path='/signIn' element={<SignIn />} />
           <Route path='/signUp' element={<SignUp />} />

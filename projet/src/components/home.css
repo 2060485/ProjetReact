@@ -1,0 +1,8 @@
+#carouselExampleAutoplaying{
+    margin: auto;
+}
+
+.img{
+    height: 400px;
+    object-fit: cover;
+}

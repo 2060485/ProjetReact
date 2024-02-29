@@ -9,3 +9,11 @@
 .emailError{
     color: red;
 }
+
+.firstNameError{
+    color: red;
+}
+
+.lastNameError{
+    color: red;
+}

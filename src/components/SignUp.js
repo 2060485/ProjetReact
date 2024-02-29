@@ -20,8 +20,29 @@ function SignUp() {
     const [inputValueEmail, setinputValueEmail] = useState("");
     const [emailError, setEmailError] = useState("");
 
-    const handleEmailChange = (event) => {
+    const handleInputChangeEmail = (event) => {
         setinputValueEmail(event.target.value);
+    };
+
+    const [InputValueFirstName, setInputValueFirstName] = useState("");
+    const [firstNameError, setFirstNameError] = useState("");
+
+    const handleChangeFirstName = (event) => {
+        setInputValueFirstName(event.target.value);
+    };
+
+    const [InputValueLastName, setInputValueLastName] = useState("");
+    const [lastNameError, setLastNameError] = useState("");
+
+    const handleChangeLastName = (event) => {
+        setInputValueLastName(event.target.value);
+    };
+
+    const [inputValueUsername, setInputValueUsername] = useState("");
+    const [usernameError, setUsernameError] = useState("");
+
+    const handleInputChangeUsername = (event) => {
+        setInputValueUsername(event.target.value);
     };
 
     const handleSubmit = (event) => {
@@ -47,31 +68,55 @@ function SignUp() {
             setPasswordError("");
         }
 
+        if (InputValueFirstName==="") {
+            setFirstNameError("Please enter a First Name");
+        } else {
+            setFirstNameError("");
+        }
+
+        if (InputValueLastName==="") {
+            setLastNameError("Please enter a Last Name");
+        } else {
+            setLastNameError("");
+        }
+
+        if (inputValueUsername===/*databse*/0 ) {
+            setUsernameError("This username already exist");
+        } else {
+            setUsernameError("");
+        }
+
     };
-
-
-
 
 
     return (
         <>
-            <form class="container rounded-top rounded-bottom mt-5" onSubmit={handleSubmit}>
+            <form class="container rounded mt-3" onSubmit={handleSubmit}>
 
                 <form>
                     <p className='mt-2'>Sign up form</p>
+                    <label for="exampleName">Name</label>
                     <div class="row mt-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="First name" />
+                            <input type="text" class="form-control mt" placeholder="First name" value={InputValueFirstName} onChange={handleChangeFirstName}/>
                         </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name" />
+                        <div className='firstNameError'>{firstNameError}</div>
+                        <div class="col mt-2">
+                            <input type="text" class="form-control" placeholder="Last name" value={InputValueLastName} onChange={handleChangeLastName}/>
                         </div>
+                        <div className='lastNameError'>{lastNameError}</div>
                     </div>
                 </form>
 
                 <div class="form-group">
+                    <label for="exampleInputUsername1">Username</label>
+                    <input type="text" class="form-control" id="exampleInputUsername1" aria-describedby="emailHelp" placeholder="Username" value={inputValueUsername} onChange={handleInputChangeUsername} />
+                </div>
+                <div className='usernameError'>{usernameError}</div>
+
+                <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value={inputValueEmail} onChange={handleEmailChange} />
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" value={inputValueEmail} onChange={handleInputChangeEmail} />
                 </div>
                 <div className='emailError'>{emailError}</div>
 

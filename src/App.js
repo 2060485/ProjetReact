@@ -11,7 +11,7 @@ import Recipes from './components/Recipes';
 import ResetPassword from './components/ResetPassword';
 
 function App() {
-  return (
+  return ( 
     <BrowserRouter>
       <Nav />
       <div >

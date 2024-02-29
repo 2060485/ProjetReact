@@ -6,6 +6,7 @@ import './home.css'
 function Home() {
 
     return (
+        <>
         <div id="carouselExampleAutoplaying" class="carousel slide w-50 mt-5" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -27,6 +28,11 @@ function Home() {
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <div class="text-center mt-3">
+            <h1>Bienvenue sur Grimace Gastronomy!</h1>
+            <p class="px-5">Grimace Gastronomy est une application innovante conçue pour simplifier le processus de recherche de recettes culinaires en fonction des préférences alimentaires de chaque utilisateur. Que vous soyez végétarien, végétalien ou simplement à la recherche de nouvelles idées pour votre alimentation quotidienne, Grimace Gastronomy est votre compagnon idéal pour explorer des recettes délicieuses et adaptées à vos besoins spécifiques.</p>
+        </div>
+        </>
     );
 }
 

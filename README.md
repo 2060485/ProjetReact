@@ -1,4 +1,6 @@
-# WIP-REDO
+# WIP-DEV
+DEVELOPPEMENT BRANCH
+
 Cleaned up and reorganised all our code into one branch.
 Only src and react public files are provided, backend and frontend (maven and react) must be generated.
 

@@ -9,6 +9,7 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import Recipes from './components/Recipes';
 import ResetPassword from './components/ResetPassword';
+import Catalogue from './components/Catalogue';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/about' element={<Home />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/recipes' element={<Recipes />} />
+          <Route path='/catalogue'element={<Catalogue/>} />
           <Route path='/signIn' element={<SignIn />} />
           <Route path='/signUp' element={<SignUp />} />
           <Route path='/resetPassword' element={<ResetPassword />} />

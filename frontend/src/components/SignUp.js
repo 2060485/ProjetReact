@@ -47,90 +47,53 @@ function SignUp() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (inputValuePassword !== inputValuePassword2) {
-            setPasswordError2("Please enter the same password!");
-        } else {
-            setPasswordError2("");
-        }
-
-        const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-        if (!emailRegex.test(inputValueEmail)) {
-            setEmailError("Please enter a valid email address!");
-        } else {
-            setEmailError("");
-        }
-
-        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
-
-        if (!passwordRegex.test(inputValuePassword)) {
-            setPasswordError("Please enter a valid password! At least 8 characters long, Contains at least one digit (0-9), Contains at least one lowercase letter (a-z), Contains at least one uppercase letter (A-Z)");
-        } else {
-            setPasswordError("");
-        }
-
-        if (InputValueFirstName==="") {
-            setFirstNameError("Please enter a First Name");
-        } else {
-            setFirstNameError("");
-        }
-
-        if (InputValueLastName==="") {
-            setLastNameError("Please enter a Last Name");
-        } else {
-            setLastNameError("");
-        }
-
-        if (inputValueUsername===/*databse*/0 ) {
-            setUsernameError("This username already exist");
-        } else {
-            setUsernameError("");
-        }
-
+        setPasswordError(inputValuePassword && /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(inputValuePassword) ? "" : "Please enter a valid password! At least 8 characters long, Contains at least one digit (0-9), Contains at least one lowercase letter (a-z), Contains at least one uppercase letter (A-Z)");
+        setPasswordError2(inputValuePassword === inputValuePassword2 ? "" : "Please enter the same password!");
+        setEmailError(inputValueEmail && /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(inputValueEmail) ? "" : "Please enter a valid email address!");
+        setFirstNameError(InputValueFirstName ? "" : "Please enter a First Name");
+        setLastNameError(InputValueLastName ? "" : "Please enter a Last Name");
+        setUsernameError(inputValueUsername ? "" : "Please choose a username.");
     };
-
 
     return (
         <>
-            <form class="container rounded mt-3" onSubmit={handleSubmit}>
+            <form className="container rounded mt-3 needs-validation" noValidate onSubmit={handleSubmit}>
 
-                <form>
+                <div>
                     <p className='mt-2'>Sign up form</p>
-                    <label for="exampleName">Name</label>
-                    <div class="row mt-3">
-                        <div class="col">
-                            <input type="text" class="form-control mt" placeholder="First name" value={InputValueFirstName} onChange={handleChangeFirstName}/>
+                    <div className="row ">
+                        <div className="col">
+                            <input type="text" className={`form-control ${firstNameError ? 'is-invalid' : (InputValueFirstName && !firstNameError ? 'is-valid' : '')}`} placeholder="First name" value={InputValueFirstName} onChange={handleChangeFirstName} required />
+                            <div className="invalid-feedback">{firstNameError}</div>
                         </div>
-                        <div className='firstNameError'>{firstNameError}</div>
-                        <div class="col mt-2">
-                            <input type="text" class="form-control" placeholder="Last name" value={InputValueLastName} onChange={handleChangeLastName}/>
+                        <div className="col">
+                            <input type="text" className={`form-control ${lastNameError ? 'is-invalid' : (InputValueLastName && !lastNameError ? 'is-valid' : '')}`} placeholder="Last name" value={InputValueLastName} onChange={handleChangeLastName} required />
+                            <div className="invalid-feedback">{lastNameError}</div>
                         </div>
-                        <div className='lastNameError'>{lastNameError}</div>
                     </div>
-                </form>
-
-                <div class="form-group">
-                    <label for="exampleInputUsername1">Username</label>
-                    <input type="text" class="form-control" id="exampleInputUsername1" aria-describedby="emailHelp" placeholder="Username" value={inputValueUsername} onChange={handleInputChangeUsername} />
                 </div>
-                <div className='usernameError'>{usernameError}</div>
 
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" value={inputValueEmail} onChange={handleInputChangeEmail} />
+                <div className="form-group mt-3">
+                    <input type="text" className={`form-control ${usernameError ? 'is-invalid' : (inputValueUsername && !usernameError ? 'is-valid' : '')}`} placeholder="Username" value={inputValueUsername} onChange={handleInputChangeUsername} required />
+                    <div className="invalid-feedback">{usernameError}</div>
                 </div>
-                <div className='emailError'>{emailError}</div>
 
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" value={inputValuePassword} onChange={handleInputChangePassword} />
+                <div className="form-group mt-1">
+                    <input type="email" className={`form-control ${emailError ? 'is-invalid' : (inputValueEmail && !emailError ? 'is-valid' : '')}`} placeholder="Email address" value={inputValueEmail} onChange={handleInputChangeEmail} required />
+                    <div className="invalid-feedback">{emailError}</div>
                 </div>
-                <div className='passwordError'>{passwordError}</div>
 
-                <div class="form-group">
-                    <input type="password" class="form-control mt-2" id="exampleInputPassword2" placeholder="Confirm" value={inputValuePassword2} onChange={handleInputChangePassword2} />
+                <div className="form-group mt-1">
+                    <input type="password" className={`form-control ${passwordError ? 'is-invalid' : (inputValuePassword && !passwordError ? 'is-valid' : '')}`} placeholder="Password" value={inputValuePassword} onChange={handleInputChangePassword} required />
+                    <div className="invalid-feedback">{passwordError}</div>
                 </div>
-                <div className='passwordError2'>{passwordError2}</div>
-                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+
+                <div className="form-group mt-1">
+                    <input type="password" className={`form-control ${passwordError2 ? 'is-invalid' : (inputValuePassword2 && !passwordError2 ? 'is-valid' : '')}`} placeholder="Confirm Password" value={inputValuePassword2} onChange={handleInputChangePassword2} required />
+                    <div className="invalid-feedback">{passwordError2}</div>
+                </div>
+
+                <button type="submit" className="btn btn-primary mt-2">Submit</button>
 
             </form>
 

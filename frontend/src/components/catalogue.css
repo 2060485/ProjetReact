@@ -1,0 +1,61 @@
+.Produits-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.produits-image{
+    width: 300px;
+    height: 350px;
+    display: block;
+    margin: auto;
+}
+
+.produits-nom{
+   color: black;
+   font-weight: bold;
+   font-size: 24px;
+}
+
+
+.produits-card{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.produits-prix{
+    color: black;
+    font-weight: bold;
+    font: 20px;
+}
+
+.produits-button{
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding:10px;
+}
+
+.produits-button:hover{
+    background-color: red;
+    padding: 12px;
+}
+
+.produits-flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h2{
+    text-align: center;
+}

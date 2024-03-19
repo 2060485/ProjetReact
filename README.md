@@ -1,13 +1,13 @@
-### WIP-REDO
-A cleaned up and reorganised branch of all our code
+# WIP-REDO
+Cleaned up and reorganised branch of all our code
 Only src files are provided, backend and frontend (maven and react) must be generated
 
-frontend added dependencies:
+Frontend added dependencies:
 1. bootstrap
 2. nodemon
 3. react-router-dom
 
-backend added dependencies:
+Backend added dependencies:
 1. lombok
 2. spring web
 3. spring data jdbc

@@ -15,7 +15,6 @@ function App() {
   return (
     <BrowserRouter>
       <Nav />
-      <div >
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Home />} />
@@ -28,7 +27,6 @@ function App() {
           <Route path='/resetPassword' element={<ResetPassword />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
-      </div>
       <Footer />
     </BrowserRouter>
   );

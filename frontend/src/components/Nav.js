@@ -33,10 +33,16 @@ function Nav() {
                     <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className={`nav-link ${activePage === '/profile' ? 'active' : ''}`} href="/profile" onClick={() => handleNavLinkClick('/profile')}>Profile</a>
+                                <a className={`nav-link ${activePage === '/profile' ? 'active' : ''}`} href="/profile"
+                                   onClick={() => handleNavLinkClick('/profile')}>Profile</a>
                             </li>
                             <li className="nav-item">
-                                <a className={`nav-link ${activePage === '/signIn' ? 'active' : ''}`} href="/signIn" onClick={() => handleNavLinkClick('/signIn')}>Sign in</a>
+                                <a className={`nav-link ${activePage === '/signIn' ? 'active' : ''}`} href="/signIn"
+                                   onClick={() => handleNavLinkClick('/signIn')}>Sign in</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link ${activePage === '/signUp' ? 'active' : ''}`} href="/signUp"
+                                   onClick={() => handleNavLinkClick('/signUp')}>Sign Up</a>
                             </li>
                         </ul>
                     </div>

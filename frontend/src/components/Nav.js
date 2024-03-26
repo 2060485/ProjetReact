@@ -10,7 +10,7 @@ function Nav() {
 
     return (
         <div>
-            <nav className="navbar bg-dark border-bottom navbar-expand-lg" data-bs-theme="dark">
+            <nav className="navbar bg-dark border-bottom navbar-expand-md" data-bs-theme="dark">
                 <div className="container-fluid">
                     <img src={Grimace} alt="Logo" width="30" height="30" className="d-inline-block align-text-top" />
                     <a className="navbar-brand" href="#">Grimace</a>

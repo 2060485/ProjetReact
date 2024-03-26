@@ -1,12 +1,12 @@
-
+import './footer.css'
 
 function Footer() {
     return (
-        <div>
-            <nav class="d-flex flex-column vh-100 mt-auto navbar navbar-dark border bg-dark">
-                <small class="p-2 display-3 navbar-brand mx-auto">© 2024 Grimace Gastronomy, Inc. Tous droits réservés.</small>
+        <footer className="footer">
+            <nav className="navbar bg-dark justify-content-center">
+                <span className="text-white">© 2024 Grimace Gastronomy, Inc. Tous droits réservés.</span>
             </nav>
-        </div>
+        </footer>
     );
 }
 

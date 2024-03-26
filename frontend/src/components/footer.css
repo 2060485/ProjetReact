@@ -1,0 +1,14 @@
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 44px; /* Vertically center the text there */
+}
+
+@media (max-height: 700px) {
+    .footer {
+        position: sticky;
+    }
+}

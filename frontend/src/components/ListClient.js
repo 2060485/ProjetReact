@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function ClientList() {
     const [clients, setClients] = useState([]);
+    const [editingClientId, setEditingClientId] = useState(null);
     const [updatedClient, setUpdatedClient] = useState({
         clientID: '',
         firstName: '',
         lastName: '',
         email: ''
     });
-    const [editingClientId, setEditingClientId] = useState(null);
 
-    const getAllClients = (e) => {
-        e.preventDefault();
+    const getAllClients = () => {
         axios.get("http://localhost:7373/bob")
             .then((res) => {
                 setClients(res.data);
@@ -77,12 +76,14 @@ function ClientList() {
         });
     }
 
-    return (
-        <div>
-            <h2>Client List</h2>
-            <button onClick={getAllClients}>Get All Clients</button>
+    useEffect(() => {
+        getAllClients();
+    }, []);
 
-            <table>
+    return (
+        <div className="container mt-3">
+            <h2 className="mt-5 mb-4">Client List</h2>
+            <table className="table">
                 <thead>
                 <tr>
                     <th>ID</th>
@@ -97,24 +98,24 @@ function ClientList() {
                     <tr key={client.clientID}>
                         <td>{client.clientID}</td>
                         <td>{editingClientId === client.clientID ?
-                            <input type="text" name="firstName" value={updatedClient.firstName} onChange={handleInputChange} /> :
+                            <input type="text" name="firstName" value={updatedClient.firstName} onChange={handleInputChange} className="form-control" /> :
                             client.firstName}</td>
                         <td>{editingClientId === client.clientID ?
-                            <input type="text" name="lastName" value={updatedClient.lastName} onChange={handleInputChange} /> :
+                            <input type="text" name="lastName" value={updatedClient.lastName} onChange={handleInputChange} className="form-control" /> :
                             client.lastName}</td>
                         <td>{editingClientId === client.clientID ?
-                            <input type="text" name="email" value={updatedClient.email} onChange={handleInputChange} /> :
+                            <input type="text" name="email" value={updatedClient.email} onChange={handleInputChange} className="form-control" /> :
                             client.email}</td>
                         <td>
                             {editingClientId === client.clientID ? (
                                 <>
-                                    <button onClick={() => updateClientById(client.clientID)}>Save</button>
-                                    <button onClick={cancelEdit}>Cancel</button>
+                                    <button onClick={() => updateClientById(client.clientID)} className="btn btn-success m-1">Save</button>
+                                    <button onClick={cancelEdit} className="btn btn-danger m-1">Cancel</button>
                                 </>
                             ) : (
-                                <button onClick={() => setEditClient(client)}>Edit</button>
+                                <button className="btn btn-primary m-1" onClick={() => setEditClient(client)}>Edit</button>
                             )}
-                            <button onClick={() => deleteClientById(client.clientID)}>Delete</button>
+                            <button className="btn btn-danger m-1" onClick={() => deleteClientById(client.clientID)}>Delete</button>
                         </td>
                     </tr>
                 ))}

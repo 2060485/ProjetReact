@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:3333")
+@CrossOrigin(origins = "http://localhost:3333")
 public class AppController {
 
     @Autowired
@@ -61,5 +61,31 @@ public class AppController {
         clientRepository.save(client);
 
         return client;
+    }
+
+    @DeleteMapping("/getrec/delete/{id}")
+    public boolean deleteRecetteById(@PathVariable("id") int id) {
+        if (recetteRepository.existsById(id)) {
+            recetteRepository.deleteById(id);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @PutMapping("/getrec/update/{id}")
+    public Recette updateRecetteById(@PathVariable("id") int id, @RequestBody Recette updatedRecette) {
+        Recette recette = recetteRepository.findById(id).orElse(null);
+
+        recette.setRecipe_name(updatedRecette.getRecipe_name());
+        recette.setCalories(updatedRecette.getCalories());
+        recette.setDescriptions(updatedRecette.getDescriptions());
+        recette.setIngredients(updatedRecette.getIngredients());
+        recette.setIsVegan(updatedRecette.getIsVegan());
+        recette.setIsVegetarian(updatedRecette.getIsVegetarian());
+        recette.setInstructions(updatedRecette.getInstructions());
+        recetteRepository.save(recette);
+
+        return recette;
     }
 }

@@ -22,6 +22,7 @@ Frontend added dependencies:
 1. bootstrap
 2. nodemon
 3. react-router-dom
+4. axios
 
 Backend added dependencies:
 1. lombok

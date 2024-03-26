@@ -10,6 +10,8 @@ import SignUp from './components/SignUp';
 import Recipes from './components/Recipes';
 import ResetPassword from './components/ResetPassword';
 import Catalogue from './components/Catalogue';
+import AddClient from "./components/AddClient";
+import ListClient from "./components/ListClient";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path='/signUp' element={<SignUp />} />
           <Route path='/resetPassword' element={<ResetPassword />} />
           <Route path="*" element={<NotFound/>} />
+          <Route path="/addClts" element={<AddClient/>} />
+          <Route path="/listClts" element={<ListClient/>} />
         </Routes>
       <Footer />
     </BrowserRouter>

@@ -7,9 +7,11 @@ function Home() {
 
     return (
         <>
-        <div id="carouselExampleAutoplaying" class="carousel slide w-50 mt-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
+        <body>
+
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner justify-content-center">
+                <div class="carousel-item active ">
                     <img src={test} class="d-block w-100 img" alt="..."/>
                 </div>
                 <div class="carousel-item">
@@ -27,11 +29,28 @@ function Home() {
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
-        <div class="text-center mt-3">
-            <h1>Bienvenue sur Grimace Gastronomy!</h1>
-            <p class="px-5">Grimace Gastronomy est une application innovante conçue pour simplifier le processus de recherche de recettes culinaires en fonction des préférences alimentaires de chaque utilisateur. Que vous soyez végétarien, végétalien ou simplement à la recherche de nouvelles idées pour votre alimentation quotidienne, Grimace Gastronomy est votre compagnon idéal pour explorer des recettes délicieuses et adaptées à vos besoins spécifiques.</p>
-        </div>
+            </div>
+
+            <div class="container mt-5">
+
+            <div class="text-center row mt-4 border-bottom border-secondary">
+                <div class="col-12 col-lg-8">
+                <h1 class="display-5">Bienvenue sur Grimace Gastronomy!</h1>
+                <p class="px-5">Grimace Gastronomy est une application innovante conçue pour simplifier le processus de recherche de recettes culinaires en fonction des préférences et buts alimentaires de chaque individu.</p>
+                </div>
+                <div class="col-12 col-lg-4">
+                <p class="px-5">Que vous soyez végétarien, végétalien ou simplement à la recherche de nouvelles idées pour votre alimentation quotidienne, GG est votre compagnon idéal pour explorer des recettes délicieuses et adaptées à vos besoins spécifiques!</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <a class="col-6 text-start">Créer votre compte!</a>
+                <a class="col-6 text-end">Déjà un utilisateur?</a>
+            </div>
+
+            </div>
+        </body>
+    
         </>
     );
 }

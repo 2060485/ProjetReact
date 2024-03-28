@@ -3,6 +3,15 @@
 }
 
 .img{
-    height: 400px;
+    height: 500px;
     object-fit: cover;
+}
+
+.container {
+    border: none;
+    color:black;
+}
+
+body {
+    background-image: url(hexagon2.jpg);
 }

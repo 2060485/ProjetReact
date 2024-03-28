@@ -14,8 +14,9 @@ public class Recette {
     private Integer calories;
     private Boolean isVegan;
     private Boolean isVegetarian;
-    private String descriptions;
+    private String description;
     private String ingredients;
     private String instructions;
+    private String img;
 
 }

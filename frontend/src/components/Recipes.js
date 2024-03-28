@@ -12,7 +12,8 @@ function Recipe() {
         isVegetarian: '',
         descriptions: '',
         ingredients: '',
-        instructions: ''
+        instructions: '',
+        
     });
 
     const getAllRecettes = () => {
@@ -121,7 +122,7 @@ function Recipe() {
                         <td>{editingRecetteId === recette.recipe_ID ?
                             <input type="text" name="email" value={updatedRecette.isVegetarian} onChange={handleInputChange} className="form-control"/> : recette.isVegetarian? "True":"False"}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
-                            <input type="text" name="email" value={updatedRecette.descriptions} onChange={handleInputChange} className="form-control"/> : recette.descriptions}</td>
+                            <input type="text" name="email" value={updatedRecette.description} onChange={handleInputChange} className="form-control"/> : recette.description}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
                             <input type="text" name="email" value={updatedRecette.ingredients} onChange={handleInputChange} className="form-control"/> : recette.ingredients}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?

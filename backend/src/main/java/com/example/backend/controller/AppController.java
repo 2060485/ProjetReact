@@ -79,13 +79,14 @@ public class AppController {
 
         recette.setRecipe_name(updatedRecette.getRecipe_name());
         recette.setCalories(updatedRecette.getCalories());
-        recette.setDescriptions(updatedRecette.getDescriptions());
+        recette.setDescription(updatedRecette.getDescription());
         recette.setIngredients(updatedRecette.getIngredients());
         recette.setIsVegan(updatedRecette.getIsVegan());
         recette.setIsVegetarian(updatedRecette.getIsVegetarian());
         recette.setInstructions(updatedRecette.getInstructions());
+        recette.setImg(updatedRecette.getImg());
         recetteRepository.save(recette);
 
         return recette;
-    }
+    }   
 }

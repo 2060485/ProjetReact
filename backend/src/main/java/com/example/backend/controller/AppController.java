@@ -1,7 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.model.Client;
-import com.example.backend.model.Recette;
+import com.example.backend.model.Recipe;
 import com.example.backend.repositories.ClientRepository;
 import com.example.backend.repositories.RecetteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,14 +31,14 @@ public class AppController {
     }
 
     @GetMapping("/getrec")
-    public List<Recette> getAllRecette() {
+    public List<Recipe> getAllRecette() {
         return recetteRepository.findAll();
     }
 
     @PostMapping("/postrec")
-    public Recette recette(@RequestBody Recette recette) {
-        recetteRepository.save(recette);
-        return recette;
+    public Recipe recette(@RequestBody Recipe recipe) {
+        recetteRepository.save(recipe);
+        return recipe;
     }
 
     @DeleteMapping("/bob/delete/{id}")
@@ -74,19 +74,19 @@ public class AppController {
     }
 
     @PutMapping("/getrec/update/{id}")
-    public Recette updateRecetteById(@PathVariable("id") int id, @RequestBody Recette updatedRecette) {
-        Recette recette = recetteRepository.findById(id).orElse(null);
+    public Recipe updateRecetteById(@PathVariable("id") int id, @RequestBody Recipe updatedRecipe) {
+        Recipe recipe = recetteRepository.findById(id).orElse(null);
 
-        recette.setRecipe_name(updatedRecette.getRecipe_name());
-        recette.setCalories(updatedRecette.getCalories());
-        recette.setDescription(updatedRecette.getDescription());
-        recette.setIngredients(updatedRecette.getIngredients());
-        recette.setIsVegan(updatedRecette.getIsVegan());
-        recette.setIsVegetarian(updatedRecette.getIsVegetarian());
-        recette.setInstructions(updatedRecette.getInstructions());
-        recette.setImg(updatedRecette.getImg());
-        recetteRepository.save(recette);
+        recipe.setRecipe_name(updatedRecipe.getRecipe_name());
+        recipe.setCalories(updatedRecipe.getCalories());
+        recipe.setDescriptions(updatedRecipe.getDescriptions());
+        recipe.setIngredients(updatedRecipe.getIngredients());
+        recipe.setIsVegan(updatedRecipe.getIsVegan());
+        recipe.setIsVegetarian(updatedRecipe.getIsVegetarian());
+        recipe.setInstructions(updatedRecipe.getInstructions());
+        recipe.setImg(updatedRecipe.getImg());
+        recetteRepository.save(recipe);
 
-        return recette;
+        return recipe;
     }   
 }

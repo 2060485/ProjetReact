@@ -31,7 +31,7 @@ function Catalogue() {
                             <div className='card-body' style={{height: '200px'}}>
                                 <h5 className='card-title'>{recette.recipe_name}</h5>
                                 <p className='card-text'>Calories: {recette.calories}</p>
-                                <p className='card-text'>{recette.description}</p>
+                                <p className='card-text'>{recette.descriptions}</p>
                             </div>
                         </div>
                     </div>

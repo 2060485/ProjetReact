@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Recette {
+public class Recipe {
 
     @Id
     private int recipe_ID;
@@ -14,7 +14,7 @@ public class Recette {
     private Integer calories;
     private Boolean isVegan;
     private Boolean isVegetarian;
-    private String description;
+    private String descriptions;
     private String ingredients;
     private String instructions;
     private String img;

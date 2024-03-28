@@ -12,8 +12,8 @@ function Nav() {
         <div>
             <nav className="navbar bg-dark border-bottom navbar-expand-md" data-bs-theme="dark">
                 <div className="container-fluid">
-                    <img src={Grimace} alt="Logo" width="30" height="30" className="d-inline-block align-text-top" />
-                    <a className="navbar-brand" href="#">Grimace</a>
+                    <img src={Grimace} alt="Logo" width="50" height="50" className="d-inline-block align-text-top" />
+                    <a className="navbar-brand mx-2" href="/">Grimace Gastronomy</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

@@ -1,6 +1,6 @@
-import test from "./test.png";
-import grimace from "./grimace.png";
-import bard from "./Bard.jpg";
+import food from "./food.png";
+import seafood from "./seafood.jpg";
+import noodles from "./noodles.jpg";
 import './home.css'
 
 function Home() {
@@ -12,13 +12,13 @@ function Home() {
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner justify-content-center">
                 <div class="carousel-item active ">
-                    <img src={test} class="d-block w-100 img" alt="..."/>
+                    <img src={food} class="d-block w-100 img" alt="..."/>
                 </div>
                 <div class="carousel-item">
-                    <img src={grimace} class="d-block w-100 img" alt="..."/>
+                    <img src={seafood} class="d-block w-100 img" alt="..."/>
                 </div>
                 <div class="carousel-item">
-                    <img src={bard} class="d-block w-100 img" alt="..."/>
+                    <img src={noodles} class="d-block w-100 img" alt="..."/>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -44,9 +44,16 @@ function Home() {
             </div>
 
             <div class="row">
-                <a class="col-6 text-start">Créer votre compte!</a>
-                <a class="col-6 text-end">Déjà un utilisateur?</a>
+                <a class="col-6 text-start" href="signUp">Create your account!</a>
+                <a class="col-6 text-end" href="/signIn">Already a user?</a>
             </div>
+
+            <div class="row">
+                <div class="col-8">
+                    
+                </div>
+            </div>
+
 
             </div>
         </body>

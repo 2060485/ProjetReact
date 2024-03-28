@@ -107,6 +107,7 @@ function Recipe() {
                     <th>Descriptions</th>
                     <th>Ingredients</th>
                     <th>Instructions</th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -114,19 +115,19 @@ function Recipe() {
                     <tr key={recette.recipe_ID}>
                         <td>{recette.recipe_ID}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
-                            <input type="text" name="recipeName" value={updatedRecette.recipe_name} onChange={handleInputChange} className="form-control"/> : recette.recipe_name}</td>
+                            <input type="text" name="recipe_name" value={updatedRecette.recipe_name} onChange={handleInputChange} className="form-control"/> : recette.recipe_name}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
                             <input type="text" name="calories" value={updatedRecette.calories} onChange={handleInputChange} className="form-control"/> : recette.calories}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
-                            <input type="text" name="email" value={updatedRecette.isVegan} onChange={handleInputChange} className="form-control"/> : recette.isVegan? "True":"False"}</td>
+                            <input type="text" name="isVegan" value={updatedRecette.isVegan} onChange={handleInputChange} className="form-control"/> : recette.isVegan? "True":"False"}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
-                            <input type="text" name="email" value={updatedRecette.isVegetarian} onChange={handleInputChange} className="form-control"/> : recette.isVegetarian? "True":"False"}</td>
+                            <input type="text" name="isVegetarian" value={updatedRecette.isVegetarian} onChange={handleInputChange} className="form-control"/> : recette.isVegetarian? "True":"False"}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
-                            <input type="text" name="email" value={updatedRecette.description} onChange={handleInputChange} className="form-control"/> : recette.description}</td>
+                            <input type="text" name="descriptions" value={updatedRecette.descriptions} onChange={handleInputChange} className="form-control"/> : recette.descriptions}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
-                            <input type="text" name="email" value={updatedRecette.ingredients} onChange={handleInputChange} className="form-control"/> : recette.ingredients}</td>
+                            <input type="text" name="ingredients" value={updatedRecette.ingredients} onChange={handleInputChange} className="form-control"/> : recette.ingredients}</td>
                         <td>{editingRecetteId === recette.recipe_ID ?
-                            <input type="text" name="email" value={updatedRecette.instructions} onChange={handleInputChange} className="form-control"/> : recette.instructions}</td>
+                            <input type="text" name="instructions" value={updatedRecette.instructions} onChange={handleInputChange} className="form-control"/> : recette.instructions}</td>
                         <td>
                             {editingRecetteId === recette.recipe_ID ? (
                                 <>

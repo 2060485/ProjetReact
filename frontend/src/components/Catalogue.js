@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './catalogue.css'
+import Footer from './Footer';
 
 function Catalogue() {
     const [recettes, setRecettes] = useState([]);

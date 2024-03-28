@@ -3,10 +3,20 @@
 }
 
 .img{
-    height: 400px;
+    height: 500px;
     object-fit: cover;
 }
 
+<<<<<<< HEAD
 body{
     padding-bottom: 50px;
+=======
+.container {
+    border: none;
+    color:black;
+}
+
+body {
+    background-image: url(hexagon2.jpg);
+>>>>>>> 42c6ea0af04f830e3b19fc2302a8826f4b8e5838
 }

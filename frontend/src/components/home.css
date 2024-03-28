@@ -6,3 +6,7 @@
     height: 400px;
     object-fit: cover;
 }
+
+body{
+    padding-bottom: 50px;
+}

@@ -1,6 +1,6 @@
-import './catalogue.css'
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './catalogue.css'
 
 function Catalogue() {
     const [recettes, setRecettes] = useState([]);
@@ -20,21 +20,21 @@ function Catalogue() {
     }, []);
 
     return (
-        <div className='Produits-main'>
-            <div>
-                <h2>Catalogue</h2>
-            </div>
-            <div>
-                <div className='produits-grid'>
-                    {recettes.map((recette, index) => (
-                        <div className='produits-card' key={index}>
-                            <img className='produits-image' src={recette.img} alt={recette.recipe_name}/>
-                            <div className='produits-nom'>{recette.recipe_name}</div>
-                            <div className='produits-calories'>Calories: {recette.calories}</div>
-                            <div className='produits-calories'>{recette.description}</div>
+        <div className='container mt-4 content container-recipes'>
+            <h2 className='text-center mb-4'>Catalogue</h2>
+            <div className='row'>
+                {recettes.map((recette) => (
+                    <div className='col-lg-4 col-md-6 mb-4'>
+                        <div className='card'>
+                            <img className='card-img-top' src={recette.img} alt={recette.recipe_name} style={{height: '350px'}} />
+                            <div className='card-body' style={{height: '200px'}}>
+                                <h5 className='card-title'>{recette.recipe_name}</h5>
+                                <p className='card-text'>Calories: {recette.calories}</p>
+                                <p className='card-text'>{recette.description}</p>
+                            </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

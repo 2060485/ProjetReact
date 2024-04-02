@@ -16,25 +16,27 @@ import FormTest from "./components/FormTest";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Nav />
+    <div className='App'>
+      <BrowserRouter>
+        <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Home />} />
           <Route path='/about' element={<Home />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/recipes' element={<Recipes />} />
-          <Route path='/catalogue'element={<Catalogue/>} />
+          <Route path='/catalogue' element={<Catalogue />} />
           <Route path='/signIn' element={<SignIn />} />
           <Route path='/signUp' element={<SignUp />} />
           <Route path='/resetPassword' element={<ResetPassword />} />
-          <Route path="*" element={<NotFound/>} />
-          <Route path="/addClts" element={<AddClient/>} />
-          <Route path="/listClts" element={<ListClient/>} />
-          <Route path="/formtest" element={<FormTest/>} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/addClts" element={<AddClient />} />
+          <Route path="/listClts" element={<ListClient />} />
+          <Route path="/formtest" element={<FormTest />} />
         </Routes>
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -19,9 +19,6 @@ function Nav() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className={`nav-link ${activePage === '/' ? 'active' : ''}`} href="/" onClick={() => handleNavLinkClick('/')}>Home</a>
-                            </li>
                             <li  className="nav-item">
                                 <a className={`nav-link ${activePage === '/recipes' ? 'active' : ''}`} href="/recipes" onClick={() => handleNavLinkClick('/recipes')}>Recipes</a>
                             </li>

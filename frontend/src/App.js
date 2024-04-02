@@ -12,7 +12,7 @@ import ResetPassword from './components/ResetPassword';
 import Catalogue from './components/Catalogue';
 import AddClient from "./components/AddClient";
 import ListClient from "./components/ListClient";
-import FormTest from "./components/FormTest";
+import RecipeForm from "./components/RecipeForm";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/addClts" element={<AddClient />} />
           <Route path="/listClts" element={<ListClient />} />
-          <Route path="/formtest" element={<FormTest />} />
+          <Route path="/recipeForm" element={<RecipeForm />} />
         </Routes>
         <Footer />
       </BrowserRouter>

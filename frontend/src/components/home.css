@@ -7,11 +7,10 @@
     object-fit: cover;
 }
 
-.container {
-    border: none;
-    color:black;
+.container-home {
+    border: none; 
 }
 
 body {
-    background-color: white;
+    background-color: ghostwhite;
 }

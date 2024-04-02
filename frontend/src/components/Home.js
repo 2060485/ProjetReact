@@ -31,7 +31,7 @@ function Home() {
             </button>
             </div>
 
-            <div class="container mt-5">
+            <div class="container container-home mt-5">
 
             <div class="text-center row mt-4 border-bottom border-secondary">
                 <div class="col-12 col-lg-8">

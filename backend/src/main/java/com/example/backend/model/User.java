@@ -7,13 +7,15 @@ import lombok.Data;
 
 @Entity // Class is DB
 @Data  // Does getters setters
-public class Client {
+public class User {
 
     @Id
     @GeneratedValue // Not needed, will auto_increment
-    private int clientID;
-    private String firstName;
-    private String lastName;
+    private int idUser;
+    private String first_name;
+    private String last_name;
+    private String username;
+    private String passwd;
     private String email;
 
 }

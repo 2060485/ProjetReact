@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Entity // Class is DB
 @Data  // Does getters setters
-public class User {
+public class Users {
 
     @Id
     @GeneratedValue // Not needed, will auto_increment

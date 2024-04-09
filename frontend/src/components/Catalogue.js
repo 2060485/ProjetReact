@@ -29,13 +29,15 @@ function Catalogue() {
                        <Link to={`/catalogue/${recipe.recipe_name.replace(/\s+/g, '-')}`} style={{ textDecoration: 'none' }}>
                             <div className='card'>
                                 <img className='card-img-top' src={recipe.img} alt={recipe.recipe_name} style={{ height: '350px' }} />
-                                <div className='card-body' style={{ height: '200px' }}>
-                                    <h5 className='card-title'>{recipe.recipe_name}</h5>
-                                    <p className='card-text'>Calories: {recipe.calories}</p>
-                                    <p className='card-text'>{recipe.descriptions}</p>
+                                <div className='card-body' style={{height: '200px'}}>
+                                    <h5 className='card-title mt-2'>{recipe.recipe_name}</h5>
+                                    <p className='card-text mt-2'>Calories: {recipe.calories}</p>
+
+                                    <p className='card-text mt-2'>{recipe.descriptions}</p>
+                                    <p className='card-text text-end mt-4'><i class="bi bi-clock"></i> {recipe.preparationTime}</p>
                                 </div>
                             </div>
-                        </Link>
+                       </Link>
                     </div>
                 ))}
             </div>

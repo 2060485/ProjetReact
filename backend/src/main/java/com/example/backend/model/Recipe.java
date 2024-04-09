@@ -18,5 +18,6 @@ public class Recipe {
     private String ingredients;
     private String instructions;
     private String img;
+    private String preparationTime;
 
 }

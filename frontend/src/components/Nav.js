@@ -19,21 +19,28 @@ function Nav() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li  className="nav-item">
-                                <a className={`nav-link ${activePage === '/recipes' ? 'active' : ''}`} href="/recipes" onClick={() => handleNavLinkClick('/recipes')}>Recipes</a>
+                            <li className="nav-item">
+                                <a className={`nav-link ${activePage === '/recipes' ? 'active' : ''}`}
+                                   href="/recipes" onClick={() => handleNavLinkClick('/recipes')}>Recipes</a>
                             </li>
-                            <li  className="nav-item">
-                                <a className={`nav-link ${activePage === '/catalogue' ? 'active' : ''}`} href="/catalogue" onClick={() => handleNavLinkClick('/recipes')}>Catalogue</a>
+                            <li className="nav-item">
+                                <a className={`nav-link ${activePage === '/catalogue' ? 'active' : ''}`}
+                                   href="/catalogue" onClick={() => handleNavLinkClick('/recipes')}>Catalogue</a>
                             </li>
-                            <li  className="nav-item">
-                                <a className={`nav-link ${activePage === '/formtest' ? 'active' : ''}`} href="/recipeForm" onClick={() => handleNavLinkClick('/recipeForm')}>Formulaire</a>
+                            <li className="nav-item">
+                                <a className={`nav-link ${activePage === '/formtest' ? 'active' : ''}`}
+                                   href="/recipeForm" onClick={() => handleNavLinkClick('/recipeForm')}>Formulaire</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className={`nav-link ${activePage === '/listClts' ? 'active' : ''}`}
+                                   href="/listClts" onClick={() => handleNavLinkClick('/listClts')}>Clients</a>
                             </li>
                         </ul>
                     </div>
                     <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className={`nav-link ${activePage === '/profile' ? 'active' : ''}`} href="/profile"
+                            <a className={`nav-link ${activePage === '/profile' ? 'active' : ''}`} href="/profile"
                                    onClick={() => handleNavLinkClick('/profile')}>Profile</a>
                             </li>
                             <li className="nav-item">

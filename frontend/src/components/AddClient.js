@@ -5,8 +5,10 @@ import axios from "axios";
 function CreateClient() {
 
     const [client, setClient] = useState({
-        firstName:"",
-        lastName:"",
+        first_name:"",
+        last_name:"",
+        username:"",
+        passwd:"",
         email:""
     })
 
@@ -29,34 +31,56 @@ function CreateClient() {
     }
 
     return(
-        <div className="mt-5 container">
+        <div className="mt-5 container border-0">
             <div className="card">
                 <div className='card-header'>
-                    Add a new Client:
+                    Connexion:
                 </div>
                 <div className='card-body'>
 
                     <form method="post" onSubmit={(e) => submitNewClient(e)}>
                         <div className="mb-3">
-                            <label className="form-label">Firstname</label>
+                            <label className="form-label">Prénom</label>
                             <input type="text"
                                    className="form-control"
-                                   name="firstName"
+                                   name="first_name"
                                    required
                                    onChange={(e) => handleChange(e)}
-                                   value={client.firstName}
+                                   value={client.first_name}
 
                             />
 
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Lastname</label>
+                            <label className="form-label">Nom</label>
                             <input type="text"
                                    className="form-control"
-                                   name="lastName"
+                                   name="last_name"
                                    required
                                    onChange={(e) => handleChange(e)}
-                                   value={client.lastName}
+                                   value={client.last_name}
+
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">Nom d'utilisateur</label>
+                            <input type="text"
+                                   className="form-control"
+                                   name="username"
+                                   required
+                                   onChange={(e) => handleChange(e)}
+                                   value={client.username}
+
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">Mot de passe</label>
+                            <input type="text"
+                                   className="form-control"
+                                   name="passwd"
+                                   required
+                                   onChange={(e) => handleChange(e)}
+                                   value={client.passwd}
 
                             />
                         </div>
